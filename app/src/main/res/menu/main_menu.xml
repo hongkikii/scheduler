@@ -2,8 +2,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/addTodo"
-        android:title="일정 추가"/>
+        android:title="할 일 추가"/>
     <item
         android:id="@+id/addMemo"
         android:title="메모 추가"/>
+    <item
+        android:id="@+id/deleteMemo"
+        android:title="메모 삭제"/>
 </menu>
