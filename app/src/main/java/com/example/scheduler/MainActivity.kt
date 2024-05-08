@@ -88,6 +88,44 @@ class MainActivity : AppCompatActivity() {
             selectedDate = "$year-${month + 1}-$dayOfMonth"
             displayMemoAndTodoForDate(selectedDate)
         }
+
+        memoTextView.setOnClickListener {
+            val memo = memoMap[selectedDate] ?: ""
+            val dialogView = layoutInflater.inflate(R.layout.dialog_edit_memo, null)
+            val dateButton = dialogView.findViewById<Button>(R.id.dateButton)
+            val memoEditText = dialogView.findViewById<EditText>(R.id.memoEditText)
+            memoEditText.setText(memo)
+
+            val builder = AlertDialog.Builder(this)
+            builder.setView(dialogView)
+            builder.setTitle("메모 수정")
+
+            val oldDate = selectedDate
+            dateButton.setOnClickListener {
+                showDatePickerDialog(dateButton)
+            }
+
+            builder.setPositiveButton("update") { _, _ ->
+                val newMemo = memoEditText.text.toString()
+                memoMap.remove(oldDate)
+                addMemo(selectedDate, newMemo)
+                displayMemoAndTodoForDate(selectedDate)
+
+                val calendar = Calendar.getInstance()
+                val dateArray = selectedDate.split("-")
+                val year = dateArray[0].toInt()
+                val month = dateArray[1].toInt() - 1
+                val day = dateArray[2].toInt()
+                calendar.set(year, month, day)
+                val millis = calendar.timeInMillis
+                calendarView.setDate(millis, true, true)
+            }
+
+            builder.setNegativeButton("cancel") { _, _ -> }
+
+            val dialog = builder.create()
+            dialog.show()
+        }
     }
 
     private fun displayMemoAndTodoForDate(selectedDate: String) {
