@@ -13,8 +13,10 @@
 
 <br>
 
-# 🌷 사용 기술
-Kotlin, Android SDK, Android Studio, XML, Gradle
+# 🌷 개발 환경
+`Kotlin`, `Android SDK`, `Android Studio`, `XML`, `Gradle`
+
+<br>
 
 # 🌷 주요 기능 설명
 
