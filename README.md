@@ -69,7 +69,7 @@ https://drive.google.com/file/d/1jGfJcT8KxNpwZvYEYY5LU9tqPqqhGDfM/view?usp=shari
 
 <br>
 
-# 개선점
+# 🌷 개선점
 
 - 24시간 시간표의 경우, recyclerView를 이용할 시 중복 코드를 줄일 수 있으리라 예상됨. 다만, 특정 TextView를 지정해 불러오는 현재 구조에서 변경이 어려움. 또한 recylcerView를 이용한다면 별도의 Adapter 클래스가 필요할 것이기에, 현재와 같이 기능이 복잡하지 않은 단계에서는 어느 정도 중복 코드를 감수하는게 합리적인 trade-off라고 여겨짐
 
