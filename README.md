@@ -18,7 +18,7 @@
 
 <br>
 
-## 🌷 주요 기능 설명
+## 🌷 기능 설명
 
 ## ✔️ 할 일
 
@@ -65,7 +65,7 @@
 <br>
 
 
-## 🌷 시뮬레이션 영상 링크
+## 🌷 데모 링크
 
 https://drive.google.com/file/d/1jGfJcT8KxNpwZvYEYY5LU9tqPqqhGDfM/view?usp=sharing
 
